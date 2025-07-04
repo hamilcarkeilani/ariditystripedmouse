@@ -7,6 +7,8 @@ Ecology :
 
 PopGen:
 
+Stats for BAM files : flagstatscript
+
 Download publicly available datasets: sra_downloads.md
 
 Use k-mer based analyses: fastk_genomescope_smudgeplot.md
