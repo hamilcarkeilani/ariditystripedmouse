@@ -1,6 +1,6 @@
 !/bin/bash
 
-# script ÃƒÆ’Ã‚Â  mettre dans le rÃƒÆ’Ã‚Â©pertoire juste avant les rÃƒÆ’Ã‚Â©pertoires avec les fastq et le rÃƒÆ’Ã‚Â©pertoire d'output
+# script to put in the directory right before the directory containing the fastq files and the output directory
 
 SAMPLELIST=/media/bigvol/afiston/Work/4-project_PopGenMouse/5-Demultiplexage/NovaSEQ_run1/list_sample #path to the list of PREFIX for each fastq file (basically without the 1.fq or 2.fq)
 OUTPUTDIR=/media/bigvol/afiston/Work/4-project_PopGenMouse/5-Demultiplexage/NovaSEQ_run1/FASTQ_DEMULTI_INTRARUN/ #path to where the demultiplexed fastq are
