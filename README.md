@@ -1,5 +1,6 @@
 # ariditystripedmouse
 Code used for project Rhabdomys aridity submitted to
+
 Contents
 
 Ecology : 
@@ -7,20 +8,23 @@ Ecology :
 
 PopGen:
 
-Stats for BAM files : flagstatscript
-
-Download publicly available datasets: sra_downloads.md
-
-Use k-mer based analyses: fastk_genomescope_smudgeplot.md
-
-Trim raw sequence files and map to reference genome: trim_and_map.md
-
-Call SNPs and filter: call_snps_and_filter.md
-
-Custom python script to extract allele counts: create_csv.py
-
-R script to define dosage inferred clusters: dosageclusters.R
-
-Use CMplot to visualize density of SNPs: snp_density.R
-
-Use SnpEff to annotate vcfs: snpeff.md
+Align to reference genome : mappingscript.sh
+Stats for BAM files : flagstatscript.sh
+Remove PCR duplicates : rmpcrscript.sh
+Sort BAM files : sortingscript.sh
+SNP filtering :
+- gstacks
+- populations
+- vcftools
+- bcftools
+Analyses & figures :
+ - Stairway plot files:
+ - LEA R script :
+ - Ape R script :
+ - Mantel tests R script :
+ - BayPass :
+     - geno format conversion script
+     - input geno file
+     - input aridity file
+     - Baypass command
+     - R analyses
