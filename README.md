@@ -16,9 +16,13 @@ Remove PCR duplicates : rmpcrscript.sh
 
 Sort BAM files : sortingscript.sh
 
+Demultiplexing :
+
+Locus and SNP calling :
+ - Gstacks
+ - Populations
+
 SNP filtering :
-- gstacks
-- populations
 - vcftools
 - bcftools
 Analyses & figures :
