@@ -9,9 +9,13 @@ Ecology :
 PopGen:
 
 Align to reference genome : mappingscript.sh
+
 Stats for BAM files : flagstatscript.sh
+
 Remove PCR duplicates : rmpcrscript.sh
+
 Sort BAM files : sortingscript.sh
+
 SNP filtering :
 - gstacks
 - populations
