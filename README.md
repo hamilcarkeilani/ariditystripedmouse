@@ -25,6 +25,7 @@ Locus and SNP calling :
 SNP filtering :
 - vcftools
 - bcftools
+  
 Analyses & figures :
  - Stairway plot files:
  - LEA R script :
