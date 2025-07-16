@@ -1,5 +1,7 @@
 #Scripts used in Keilani et al. (2025)
 
+Contents :
+
 Align to reference genome : mappingscript.sh
 
 Stats for BAM files : flagstatscript.sh
