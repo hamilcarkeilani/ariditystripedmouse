@@ -1,0 +1,447 @@
+library(poolfstat)
+library(synbreed)
+
+library(vcfR)
+
+
+vcf=read.vcfR(file = '12_Rb.vcf')
+
+write.vcf(vcf, 
+          file = "vcfR_test.vcf" )
+
+
+Baypassinput=vcf2pooldata("TOTALMAC3R80MISSING20.recode.vcf", poolsizes=c(1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1))
+             
+pooldata2genobaypass(Baypassinput)
+
+genobaypass=read.table("genobaypass")
+Baypassinput2=genobaypass[,FALSE]
+#KleinPella
+Baypassinput2[,1]=genobaypass$V77+
+  genobaypass$V79+
+  genobaypass$V81+
+  genobaypass$V119+
+  genobaypass$V213+
+  genobaypass$V233+
+  genobaypass$V251+
+  genobaypass$V253+
+  genobaypass$V255+
+  genobaypass$V257+
+  genobaypass$V259+
+  genobaypass$V261+
+  genobaypass$V263+
+  genobaypass$V265+
+  genobaypass$V267+
+  genobaypass$V269+
+  genobaypass$V271+
+  genobaypass$V273+
+  genobaypass$V275
+
+#KleinPella
+Baypassinput2[,2]=genobaypass$V78+	genobaypass$V80+	genobaypass$V82+	genobaypass$V120+	genobaypass$V214+	genobaypass$V234+	genobaypass$V252+	genobaypass$V254+	genobaypass$V256+	genobaypass$V258+	genobaypass$V260+	genobaypass$V262+	genobaypass$V264+	genobaypass$V266+	genobaypass$V268+	genobaypass$V270+	genobaypass$V272+	genobaypass$V274+	genobaypass$V276
+#KolomelaMine
+Baypassinput2[,3]=genobaypass$V35+	genobaypass$V37+	genobaypass$V39+	genobaypass$V41+	genobaypass$V43+	genobaypass$V153
+#KolomelaMine
+Baypassinput2[,4]=genobaypass$V36+genobaypass$V38+genobaypass$V40+genobaypass$V42+genobaypass$V44+genobaypass$V154
+#LakeNaute
+Baypassinput2[,5]=genobaypass$V115+
+  genobaypass$V117+
+  genobaypass$V165+
+  genobaypass$V191+
+  genobaypass$V239+
+  genobaypass$V241+
+  genobaypass$V243+
+  genobaypass$V245+
+  genobaypass$V247+
+  genobaypass$V249+
+  genobaypass$V279+
+  genobaypass$V281+
+  genobaypass$V307+
+  genobaypass$V309+
+  genobaypass$V311+
+  genobaypass$V313+
+  genobaypass$V315
+#LakeNaute
+Baypassinput2[,6]=genobaypass$V116+
+  genobaypass$V118+
+  genobaypass$V166+
+  genobaypass$V192+
+  genobaypass$V240+
+  genobaypass$V242+
+  genobaypass$V244+
+  genobaypass$V246+
+  genobaypass$V248+
+  genobaypass$V250+
+  genobaypass$V280+
+  genobaypass$V282+
+  genobaypass$V308+
+  genobaypass$V310+
+  genobaypass$V312+
+  genobaypass$V314+
+  genobaypass$V316
+
+Baypassinput2[,7]=genobaypass$V69+
+  genobaypass$V71+
+  genobaypass$V73+
+  genobaypass$V75+
+  genobaypass$V283
+Baypassinput2[,8]=genobaypass$V70+
+  genobaypass$V72+
+  genobaypass$V74+
+  genobaypass$V76+
+  genobaypass$V284
+Baypassinput2[,9]=genobaypass$V85+
+  genobaypass$V87+
+  genobaypass$V89+
+  genobaypass$V91+
+  genobaypass$V93+
+  genobaypass$V95+
+  genobaypass$V97+
+  genobaypass$V149+
+  genobaypass$V189+
+  genobaypass$V335
+Baypassinput2[,10]=genobaypass$V86+
+  genobaypass$V88+
+  genobaypass$V90+
+  genobaypass$V92+
+  genobaypass$V94+
+  genobaypass$V96+
+  genobaypass$V98+
+  genobaypass$V150+
+  genobaypass$V190+
+  genobaypass$V336
+Baypassinput2[,11]=genobaypass$V83+
+  genobaypass$V99+
+  genobaypass$V101+
+  genobaypass$V103+
+  genobaypass$V317+
+  genobaypass$V319+
+  genobaypass$V361+
+  genobaypass$V363+
+  genobaypass$V365+
+  genobaypass$V367+
+  genobaypass$V369+
+  genobaypass$V371+
+  genobaypass$V373+
+  genobaypass$V399+
+  genobaypass$V401+
+  genobaypass$V437
+Baypassinput2[,12]=genobaypass$V84+
+  genobaypass$V100+
+  genobaypass$V102+
+  genobaypass$V104+
+  genobaypass$V318+
+  genobaypass$V320+
+  genobaypass$V362+
+  genobaypass$V364+
+  genobaypass$V366+
+  genobaypass$V368+
+  genobaypass$V370+
+  genobaypass$V372+
+  genobaypass$V374+
+  genobaypass$V400+
+  genobaypass$V402+
+  genobaypass$V438
+#
+Baypassinput2[,13]=genobaypass$V7+
+  genobaypass$V9+
+  genobaypass$V121+
+  genobaypass$V123+
+  genobaypass$V125+
+  genobaypass$V127+
+  genobaypass$V129+
+  genobaypass$V133+
+  genobaypass$V139+
+  genobaypass$V141+
+  genobaypass$V155+
+  genobaypass$V159+
+  genobaypass$V167+
+  genobaypass$V169+
+  genobaypass$V171+
+  genobaypass$V173+
+  genobaypass$V177+
+  genobaypass$V179+
+  genobaypass$V181+
+  genobaypass$V183+
+  genobaypass$V185+
+  genobaypass$V193+
+  genobaypass$V195+
+  genobaypass$V197+
+  genobaypass$V199+
+  genobaypass$V201+
+  genobaypass$V203+
+  genobaypass$V205+
+  genobaypass$V215+
+  genobaypass$V219+
+  genobaypass$V221+
+  genobaypass$V223+
+  genobaypass$V225+
+  genobaypass$V277+
+  genobaypass$V321+
+  genobaypass$V323+
+  genobaypass$V325+
+  genobaypass$V375+
+  genobaypass$V377+
+  genobaypass$V379+
+  genobaypass$V381+
+  genobaypass$V403+
+  genobaypass$V405+
+  genobaypass$V407+
+  genobaypass$V409+
+  genobaypass$V411+
+  genobaypass$V413+
+  genobaypass$V415+
+  genobaypass$V417
+#Sandveld
+Baypassinput2[,14]=genobaypass$V8+
+  genobaypass$V10+
+  genobaypass$V122+
+  genobaypass$V124+
+  genobaypass$V126+
+  genobaypass$V128+
+  genobaypass$V130+
+  genobaypass$V134+
+  genobaypass$V140+
+  genobaypass$V142+
+  genobaypass$V156+
+  genobaypass$V160+
+  genobaypass$V168+
+  genobaypass$V170+
+  genobaypass$V172+
+  genobaypass$V174+
+  genobaypass$V178+
+  genobaypass$V180+
+  genobaypass$V182+
+  genobaypass$V184+
+  genobaypass$V186+
+  genobaypass$V194+
+  genobaypass$V196+
+  genobaypass$V198+
+  genobaypass$V200+
+  genobaypass$V202+
+  genobaypass$V204+
+  genobaypass$V206+
+  genobaypass$V216+
+  genobaypass$V220+
+  genobaypass$V222+
+  genobaypass$V224+
+  genobaypass$V226+
+  genobaypass$V278+
+  genobaypass$V322+
+  genobaypass$V324+
+  genobaypass$V326+
+  genobaypass$V376+
+  genobaypass$V378+
+  genobaypass$V380+
+  genobaypass$V382+
+  genobaypass$V404+
+  genobaypass$V406+
+  genobaypass$V408+
+  genobaypass$V410+
+  genobaypass$V412+
+  genobaypass$V414+
+  genobaypass$V416+
+  genobaypass$V418
+Baypassinput2[,15]=genobaypass$V19+
+  genobaypass$V21+
+  genobaypass$V45+
+  genobaypass$V47+
+  genobaypass$V49+
+  genobaypass$V51+
+  genobaypass$V53+
+  genobaypass$V55+
+  genobaypass$V131+
+  genobaypass$V143+
+  genobaypass$V145+
+  genobaypass$V147+
+  genobaypass$V161+
+  genobaypass$V217+
+  genobaypass$V337+
+  genobaypass$V339+
+  genobaypass$V341+
+  genobaypass$V343+
+  genobaypass$V345+
+  genobaypass$V347+
+  genobaypass$V353+
+  genobaypass$V383+
+  genobaypass$V385+
+  genobaypass$V435
+#Soetdoring
+Baypassinput2[,16]=genobaypass$V20+
+  genobaypass$V22+
+  genobaypass$V46+
+  genobaypass$V48+
+  genobaypass$V50+
+  genobaypass$V52+
+  genobaypass$V54+
+  genobaypass$V56+
+  genobaypass$V132+
+  genobaypass$V144+
+  genobaypass$V146+
+  genobaypass$V148+
+  genobaypass$V162+
+  genobaypass$V218+
+  genobaypass$V338+
+  genobaypass$V340+
+  genobaypass$V342+
+  genobaypass$V344+
+  genobaypass$V346+
+  genobaypass$V348+
+  genobaypass$V354+
+  genobaypass$V384+
+  genobaypass$V386+
+  genobaypass$V436
+#Benfontein
+Baypassinput2[,17]=genobaypass$V105+
+  genobaypass$V107+
+  genobaypass$V109+
+  genobaypass$V111+
+  genobaypass$V113+
+  genobaypass$V235+
+  genobaypass$V237+
+  genobaypass$V285+
+  genobaypass$V287+
+  genobaypass$V289+
+  genobaypass$V291+
+  genobaypass$V293+
+  genobaypass$V295+
+  genobaypass$V297+
+  genobaypass$V299+
+  genobaypass$V301+
+  genobaypass$V303+
+  genobaypass$V305
+#Tswalu
+Baypassinput2[,18]=genobaypass$V106+
+  genobaypass$V108+
+  genobaypass$V110+
+  genobaypass$V112+
+  genobaypass$V114+
+  genobaypass$V236+
+  genobaypass$V238+
+  genobaypass$V286+
+  genobaypass$V288+
+  genobaypass$V290+
+  genobaypass$V292+
+  genobaypass$V294+
+  genobaypass$V296+
+  genobaypass$V298+
+  genobaypass$V300+
+  genobaypass$V302+
+  genobaypass$V304+
+  genobaypass$V306
+
+Baypassinput2[,19]=genobaypass$V1+
+  genobaypass$V3+
+  genobaypass$V5+
+  genobaypass$V11+
+  genobaypass$V13+
+  genobaypass$V15+
+  genobaypass$V17+
+  genobaypass$V23+
+  genobaypass$V25+
+  genobaypass$V27+
+  genobaypass$V29+
+  genobaypass$V33+
+  genobaypass$V57+
+  genobaypass$V59+
+  genobaypass$V61+
+  genobaypass$V63+
+  genobaypass$V65+
+  genobaypass$V67+
+  genobaypass$V135+
+  genobaypass$V137+
+  genobaypass$V151+
+  genobaypass$V157+
+  genobaypass$V163+
+  genobaypass$V175+
+  genobaypass$V187+
+  genobaypass$V207+
+  genobaypass$V209+
+  genobaypass$V211+
+  genobaypass$V227+
+  genobaypass$V229+
+  genobaypass$V231+
+  genobaypass$V327+
+  genobaypass$V329+
+  genobaypass$V331+
+  genobaypass$V333+
+  genobaypass$V349+
+  genobaypass$V351+
+  genobaypass$V355+
+  genobaypass$V357+
+  genobaypass$V359+
+  genobaypass$V387+
+  genobaypass$V419+
+  genobaypass$V421+
+  genobaypass$V423+
+  genobaypass$V425+
+  genobaypass$V427+
+  genobaypass$V429+
+  genobaypass$V431+
+  genobaypass$V433
+#TdR
+Baypassinput2[,20]=genobaypass$V2+
+  genobaypass$V4+
+  genobaypass$V6+
+  genobaypass$V12+
+  genobaypass$V14+
+  genobaypass$V16+
+  genobaypass$V18+
+  genobaypass$V24+
+  genobaypass$V26+
+  genobaypass$V28+
+  genobaypass$V30+
+  genobaypass$V34+
+  genobaypass$V58+
+  genobaypass$V60+
+  genobaypass$V62+
+  genobaypass$V64+
+  genobaypass$V66+
+  genobaypass$V68+
+  genobaypass$V136+
+  genobaypass$V138+
+  genobaypass$V152+
+  genobaypass$V158+
+  genobaypass$V164+
+  genobaypass$V176+
+  genobaypass$V188+
+  genobaypass$V208+
+  genobaypass$V210+
+  genobaypass$V212+
+  genobaypass$V228+
+  genobaypass$V230+
+  genobaypass$V232+
+  genobaypass$V328+
+  genobaypass$V330+
+  genobaypass$V332+
+  genobaypass$V334+
+  genobaypass$V350+
+  genobaypass$V352+
+  genobaypass$V356+
+  genobaypass$V358+
+  genobaypass$V360+
+  genobaypass$V388+
+  genobaypass$V420+
+  genobaypass$V422+
+  genobaypass$V424+
+  genobaypass$V426+
+  genobaypass$V428+
+  genobaypass$V430+
+  genobaypass$V432+
+  genobaypass$V434
+#Molopo
+Baypassinput2[,21]=genobaypass$V31+
+  genobaypass$V389+
+  genobaypass$V391+
+  genobaypass$V393+
+  genobaypass$V395+
+  genobaypass$V397
+#Gariep
+Baypassinput2[,22]=genobaypass$V32+
+  genobaypass$V390+
+  genobaypass$V392+
+  genobaypass$V394+
+  genobaypass$V396+
+  genobaypass$V398
+
+write.table(Baypassinput2, row.names=FALSE, "Baypassinput")
