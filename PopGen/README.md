@@ -1,4 +1,7 @@
-#Scripts used in Keilani et al. (2025)
+**Scripts used in Keilani et al. (2025)
+**
+
+A set of scripts used to generate and analyse SNP data, with raw data available at XXX
 
 Contents :
 
