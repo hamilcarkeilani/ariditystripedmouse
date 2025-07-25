@@ -1,9 +1,13 @@
+#Load the Baypass output from three different runs
 covis.snp.res=read.table("FinalRb_V1_summary_betai_reg.out",h=T)
 covis.snp.res2=read.table("FinalRb_V2_summary_betai_reg.out",h=T)
 covis.snp.res3=read.table("FinalRb_V3_summary_betai_reg.out",h=T)
 
+#Put all Bayes' factor data together
 covis.snp.res$BF2=covis.snp.res2$BF.dB.
 covis.snp.res$BF3=covis.snp.res3$BF.dB.
+
+#Create a
 covis.snp.res$BFtotal=(covis.snp.res$BF.dB.+covis.snp.res$BF2+covis.snp.res$BF3)/3
 
 covis.snp.res$BFtotal
