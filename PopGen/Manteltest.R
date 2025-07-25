@@ -48,10 +48,7 @@ mantel(
   na.rm = FALSE,
   parallel = getOption("mc.cores")
 )
-
-
-mantel.partial(envdist,dist, fst.dists,  method = "pearson", permutations = 10000, 
-               strata = NULL, na.rm = FALSE, parallel = getOption("mc.cores"))
+#Partial mantel tests:
 
 
 partial.mantel.test(M1 = fst.dists2, M2 = dist2, M3 = envdist2, resamp = 10000)
