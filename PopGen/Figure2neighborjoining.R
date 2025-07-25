@@ -1,35 +1,6 @@
 library(ape)
 library(ggtree)
 
-omega2=dist(omega, method="bray-curtis")
-omega3=hclust(omega2, method="ward.D2")
-plot(omega3)
-omega4=as.phylo.hclust(omega3)
-omega=as.matrix(read.table("Runname_mat_omega.out"))
-nj=nj(omega)
-plot(omega4, "u")
-omega4$tip.label=as.character(geo)
-Color=c("KleinPella", "KolomelaMine", "LakeNaute", "Mariental", "Molopo", "Benfontein", "Sandveld", "Soetdoring", "Tswalu", "TdR", "Gariep", "Tswalu", "Tswalu", "Tswalu", "Tswalu", "Tswalu", "black", "black", "Tswalu", "black", "Tswalu")
-
-
-plot=ggtree(omega4, layout="ape", aes(color=Color))+geom_tiplab(size=1)+scale_color_manual("Color", labels=c("KleinPella", "KolomelaMine", "LakeNaute", "Mariental", "Molopo", "Benfontein", "NA", "Sandveld", "Soetdoring", "Tswalu", "TdR", "Gariep"), values=c("grey", "black", "grey", "red", "grey", "red", "red", "red", "orangered", "orange", "brown", "red"))+
-  theme(text = element_text(family = "mono"))
-plot
-ggsave("plot.pdf",plot = plot)
-
-?X11Fonts
-if(capabilities()[["X11"]]) withAutoprint({
-  X11Fonts()
-  X11Fonts("mono")
-  utopia <- X11Font("-*-utopia-*-*-*-*-*-*-*-*-*-*-*-*")
-  X11Fonts(utopia = utopia)
-})
-
-
-Roboto <- X11Font("-*-roboto-*-*-*-*-*-*-*-*-*-*-*-*")
-X11Fonts(Roboto = Roboto)
-#-------------------
-X11Fonts()
 
 nj$edge.length=abs(nj$edge.length)
 
