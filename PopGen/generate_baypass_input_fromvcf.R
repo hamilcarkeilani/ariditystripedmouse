@@ -1,8 +1,7 @@
+#Load necessary packages
 library(poolfstat)
 library(synbreed)
-
 library(vcfR)
-
 
 vcf=read.vcfR(file = '12_Rb.vcf')
 
@@ -11,11 +10,17 @@ write.vcf(vcf,
 
 
 Baypassinput=vcf2pooldata("TOTALMAC3R80MISSING20.recode.vcf", poolsizes=c(1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1))
-             
+         
+#Create geno file
 pooldata2genobaypass(Baypassinput)
 
+#Convert it to table format
 genobaypass=read.table("genobaypass")
+
+#Create empty pooled file
 Baypassinput2=genobaypass[,FALSE]
+
+#Add pooled data for each locality
 #KleinPella
 Baypassinput2[,1]=genobaypass$V77+
   genobaypass$V79+
@@ -142,7 +147,7 @@ Baypassinput2[,12]=genobaypass$V84+
   genobaypass$V400+
   genobaypass$V402+
   genobaypass$V438
-#
+#Sandveld
 Baypassinput2[,13]=genobaypass$V7+
   genobaypass$V9+
   genobaypass$V121+
@@ -444,4 +449,5 @@ Baypassinput2[,22]=genobaypass$V32+
   genobaypass$V396+
   genobaypass$V398
 
+#Create a table for final input into Baypass
 write.table(Baypassinput2, row.names=FALSE, "Baypassinput")
