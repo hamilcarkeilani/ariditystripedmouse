@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# script ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  mettre dans le rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©pertoire juste avant les rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©pertoires avec les fastq et le rÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©pertoire d'output
+# script to put in the directory right before the one containing the fastq files and the output directory
 
 SAMPLELIST=list_sample #path to the list of PREFIX for each fastq file (basically without the 1.fq or 2.fq)
 SORTDIR=/media/bigvol/afiston/Work/4-project_PopGenMouse/5-Demultiplexage/NovaSEQ_run1/sorted_bamfiles_run1/
