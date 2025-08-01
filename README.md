@@ -1,11 +1,10 @@
-**Scripts used in Keilani et al. (2025)
-**
+**Scripts used in Keilani et al. (2025)**
 
 A set of scripts used to generate and analyse SNP data used in "Aridity shapes adaptive genomic divergence and population connectivity in a Southern African rodent" submitted to _Evolution_.
 
-Contents :
+**Contents :**
 
-1-RADseq data filtering and SNP calling
+**1-RADseq data filtering and SNP calling**
 - Align to reference genome : mappingscript.sh
 - Stats for BAM files : flagstatscript.sh
 - Remove PCR duplicates : rmpcrscript.sh
@@ -17,7 +16,7 @@ Contents :
 - populations filtering (without mac) : populations_write-single-snpNOMAC.sh
 - populations filtering (with mac) : populations_write-single-snpMAC.sh
   
-2-Population structure & Diversity across space and time :
+**2-Population structure & Diversity across space and time :**
  - easySFS.py output file: Rb.sfs
  - Stairway plot initialization file: two-epoch_Rb.txt
  - Stairway plot script : two-epoch_Rb.txt.plot.sh
@@ -27,7 +26,7 @@ Contents :
  - Neighbor-joining _ape_ R script (Figure 2) : Figure2neighborjoining.R 
  - Mantel tests R script : Manteltest.R
      - Figure 3 : Figure3.R
-3-GEA & Gene Ontology
+**3-GEA & Gene Ontology :**
  - BayPass GEA :
      - geno format conversion script : generate_baypass_input_fromvcf.R
      - input geno file : Baypassinput.geno
