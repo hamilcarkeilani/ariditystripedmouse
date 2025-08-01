@@ -1,10 +1,12 @@
+set.seed(123)
+
 #Load additional sample info file
 Add_columns=read.table("Add_columns_Rbdownsampled", header=T)
 #load the necessary packages
 library(LEA)
 library(tidyverse)
 library(dplyr)
-#Access the projct
+#Access the project
 obj.snmfRgenusdownsampled1=load.snmfProject("Rgenusfinaldownsampled.recode.snmfProject")
 #Access the ancestry matrix for K=3
 qmatrixK3=t(G(obj.snmfRgenusdownsampled, K=3))

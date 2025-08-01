@@ -1,7 +1,5 @@
 set.seed(123)
-install.packages("BiocManager")
 
-BiocManager::install("LEA", force = TRUE)
 #Load package
 library(LEA)
 library(ggplot2)

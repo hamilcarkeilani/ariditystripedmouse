@@ -1,3 +1,5 @@
+set.seed(123)
+
 #Load Stairway plot files for each inference
 StairwayRbdownsampled=read.table("StairwayplotRbownsampled.txt",h=T)
 StairwayRb1indperpop=read.table("StairwayplotRb1indperpop.txt",h=T)

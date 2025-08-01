@@ -1,3 +1,5 @@
+set.seed(123)
+
 #Load population differentiation values
 fst=read.table("Rb_fst(1-fst).txt",header=T, dec=",")
 

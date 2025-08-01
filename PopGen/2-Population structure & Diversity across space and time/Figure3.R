@@ -1,7 +1,7 @@
+set.seed(123)
+
 #Load distance data
-
-
-
+distframe=load.table("Geotaxobiology.txt")
 
 
 #Create composite plot

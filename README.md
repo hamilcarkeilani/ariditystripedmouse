@@ -5,7 +5,7 @@ A set of scripts used to generate and analyse SNP data.
 
 Contents :
 
-RADseq data filtering and SNP calling
+1-RADseq data filtering and SNP calling
 - Align to reference genome : mappingscript.sh
 - Stats for BAM files : flagstatscript.sh
 - Remove PCR duplicates : rmpcrscript.sh
@@ -17,7 +17,7 @@ RADseq data filtering and SNP calling
 - populations filtering (without mac) : populations_write-single-snpNOMAC.sh
 - populations filtering (with mac) : populations_write-single-snpMAC.sh
   
-Population structure & Diversity across space and time :
+2-Population structure & Diversity across space and time :
  - easySFS.py output file: Rb.sfs
  - Stairway plot initialization file: two-epoch_Rb.txt
  - Stairway plot script : two-epoch_Rb.txt.plot.sh
@@ -27,7 +27,7 @@ Population structure & Diversity across space and time :
  - Neighbor-joining _ape_ R script (Figure 2) : Figure2neighborjoining.R 
  - Mantel tests R script : Manteltest.R
      - Figure 3 : Figure3.R
-GEA & Gene Ontology
+3-GEA & Gene Ontology
  - BayPass GEA :
      - geno format conversion script : generate_baypass_input_fromvcf.R
      - input geno file : Baypassinput.geno
@@ -36,3 +36,4 @@ GEA & Gene Ontology
      - R analyses : GEAanalyses.R
      - Figure 4 : Figure4.R
      - Figure 5 : Figure5.R
+ - Genome annotation : Liftoffscript.sh
