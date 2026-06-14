@@ -1,6 +1,6 @@
-**Scripts used in Keilani et al. (2025)**
+**Scripts used in Keilani et al. (2026)**
 
-A set of scripts used to generate and analyse SNP data used in "Aridity shapes adaptive genomic divergence and population connectivity in a Southern African rodent" submitted to _Evolution_.
+A set of scripts used to generate and analyse SNP data used in "Aridity shapes adaptive genomic divergence and population connectivity in a Southern African rodent" submitted to _Proceedings_.
 
 **Contents :**
 
