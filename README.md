@@ -39,3 +39,10 @@ Intermediate files available at https://figshare.com/s/e78e8db6a7c166563e6f
      - Figure 4 : Figure4.R
      - Figure 5 : Figure5.R
  - Genome annotation : Liftoffscript.sh
+
+**Steps**
+-Install necessary programs and packages: Stacks, bowtie, samtools, vcftools, bcftools
+-Use mappingscript.sh to align NCBI sequencing files to reference genome.
+-Output alignment stats using flagstatscript.sh
+-Remove PCR duplicates using rmpcrscript.sh
+
