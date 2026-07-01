@@ -2,6 +2,8 @@
 
 A set of scripts used to generate and analyse SNP data used in "Aridity shapes adaptive genomic divergence and population connectivity in a Southern African rodent" submitted to _Proceedings_.
 
+Raw sequencing files available at https://www.ncbi.nlm.nih.gov/bioproject/1117632
+
 Intermediate files available at https://figshare.com/s/e78e8db6a7c166563e6f
 
 **Contents :**
